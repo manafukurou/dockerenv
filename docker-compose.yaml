@@ -2,9 +2,9 @@ version: "2"
 services:
 
   web:
-    build: webdevops/php-nginx:7.3
+    image: webdevops/php-nginx:7.3
     ports:
       - 80:80
     volumes:
-      - ./public:/var/www
+      - ./public:/var/www/public
       - ./vhost:/opt/docker/etc/nginx/conf.d
